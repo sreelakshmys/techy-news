@@ -1,38 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
 .App {
+  max-width: 70vw;
+  margin: 3rem auto 1.5rem auto;
+  background-color: transparent;
+}
+
+.main {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  background-color: #f1f0ef;
+  border-radius: 12px;
+}
+li {
+  list-style: none;
+  margin: 2em 0;
+  color: #ff742b;
+}
+li:active {
+  color: rgb(245, 80, 80);
+}
+li:hover {
+  color: rgb(49, 49, 202);
+}
+
+.link {
+  text-decoration: none;
+}
+.title {
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.title-area {
+  background-color: #ff742b;
+  height: 6em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 12px 12px 0 0;
+}
+
+.loader {
+  margin-top: 1em;
+}
+
+.searchInput {
+  border-radius: 6px 0 6px 6px;
+  height: 40px;
+  width: calc(100% - 40px);
+  padding: 10px;
+  font-size: medium;
+  float: left;
+}
+img,
+svg {
+  vertical-align: middle;
+}
+.search {
+  /* border-radius: 0 4px 4px 0; */
+  height: 40px;
+  width: 40px;
+  color: #ff742b;
+  background-color: #d6cfcf;
+  cursor: pointer;
+  float: left;
+  border-left: none;
+}
+
+.articles {
+  padding: 0 1.25em 1.25em 1.25em;
+  border-radius: 12px;
+}
+
+.loader {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.href-tag {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.subtext {
+  color: gray;
+  font-size: 0.75em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.pagination {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 12px 0;
+  padding-left: 16px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (min-width: 768px) {
+  .searchform {
+    flex-basis: 50%;
   }
 }
